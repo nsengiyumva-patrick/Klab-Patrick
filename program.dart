@@ -40,4 +40,19 @@ void main() {
   });
   print("Cheap is " + initial['name']);
   print("Expensive is " + second_initial['name']);
+
+  double initial_sum = 0;
+  data.forEach((element) {
+    initial_sum += element['price'];
+  });
+  print("The summation is");
+  print(initial_sum);
+
+  data.removeWhere((element) => element['price'] < 10);
+  double InitialPrice = 0;
+  data.forEach((element) {
+    InitialPrice += element['price'];
+  });
+  print('Summation of specific is');
+  print(InitialPrice);
 }
